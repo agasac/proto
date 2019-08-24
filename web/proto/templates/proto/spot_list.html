@@ -1,0 +1,29 @@
+{% extends 'proto/base.html' %}
+
+{% block content %}
+<form action="" method="GET">
+{{ form }}
+<button type="submit">検索</button>
+</form>
+
+<table class="table table-bordered mt-4">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>名前</th>
+      <th>都道府県名</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for spot in spot_list %}
+    <tr>
+      <td>{{ spot.pk }}</td>
+      <td>{{ spot.name }}</td>
+      <td>{{ spot.prefecture }}</td>
+      <td>{{ spot.description }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
