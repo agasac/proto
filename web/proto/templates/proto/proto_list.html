@@ -2,4 +2,8 @@
 
 {% block content%}
 トップページだよ
+<div>
+  <a href = "{% url 'proto:search' %}"> 検索画面 </a>
+  <a href = "{% url 'admin:index' %}">　管理画面へ </a>
+</div>
 {% endblock %}
