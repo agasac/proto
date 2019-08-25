@@ -1,0 +1,30 @@
+{% extends "proto/base.html" %}
+
+{% block content %}
+  {{ message }}
+  <hr>
+  <form method="POST" action="">
+    {{form.prefecture.label}}{{form.prefecture}}
+    <input type="submit" value="送信">
+    {% csrf_token %}
+  </form>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ホテル名</th>
+      <th>住所</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for hotelinfo in hotelinfo_list %}
+    <tr>
+      <th scope="row"> {{ forloop.counter }}</th>
+      <th> {{ hotelinfo.0 }} </th>
+      <th> {{ hotelinfo.1 }} </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
