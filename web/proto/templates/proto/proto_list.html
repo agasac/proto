@@ -3,7 +3,8 @@
 {% block content%}
 トップページだよ
 <div>
-  <a href = "{% url 'proto:search' %}"> 検索画面 </a>
-  <a href = "{% url 'admin:index' %}">　管理画面へ </a>
+  <a href = "{% url 'proto:search' %}"> 観光地検索画面へ </a> <br>
+  <a href = "{% url 'admin:index' %}">　管理画面へ </a> <br>
+  <a href = "{% url 'proto:jaran_search' %}"> じゃらんホテル検索へ </a>
 </div>
 {% endblock %}
